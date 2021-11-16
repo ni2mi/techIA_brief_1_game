@@ -1,50 +1,50 @@
 import random
-def attack(x) :                    # x =  Les points de vie ennemie ex : x = enemy["pv"]
-    ''' Fonction pour l'attaque corp à corp   
+def attack(x) :                    
+    ''' Function to attack enemy by random between 5 and 10   
     ---------------  
-    Prend pour parametre x un int  '''
+    x should be an int  (Like x = enemy_HP) '''
     return x - random.randint(5,10) 
 
 
 def attack_lightning(x):              # x =  Les points de vie ennemie 
-    ''' Fonction pour l'attaque élcaire  
+    ''' Function to attack enemy by random between 9 and 12
     ---------------  
-    Prend pour parametre x un int  '''   
+    x should be an int  (Like x = enemy_HP)  '''   
     return x - random.randint(9,12)
 
 def attack_group(x):             # x =  Les points de vie ennemie 
-    ''' Fonction pour l'attaque groupé 
+    ''' Function to attack group of enemy by random damages between 8 and 16
     ---------------  
-    Prend pour parametre x un int  '''
+    x should be an int  (Like x = enemy_HP)   '''
     return x - random.randint(8,16)
 
 
-def enemy_attack(x):              # x =  Les points de vie de {prenom} 
-    '''  Fonction quand l'ennemie attaque 
+def enemy_attack(x):             
+    ''' Function to attack playerHP 
     ---------------  
-    Prend pour parametre x un int  '''
+    x should be an int  (Like x = player_hp)  '''
     return x - random.randint(4,9)
 
  
 
 def potion(x):                      # x =  Les points de vie de {prenom} 
-    '''  Fonction pour ajouter 15 PV  
+    '''  This function add 15HP to HP_player 
     ---------------  
-    Prend pour parametre x un int  '''
+    x should be an int  (Like x = player_hp)  '''
     x+= 15  
     return x 
 def max_potion(x):                 # x =  Les points de vie de {prenom} 
-    '''  Fonction pour ajouter 50 PV  
+    '''  This function add 15HP to HP_player 
     ---------------  
-    Prend pour parametre x un int  '''
+    x should be an int  (Like x = player_hp)  '''
     x += 50 
     return x 
   
 def pop_enemy():
-    '''  Fonction pour creer entre 1 et 3 ennemis de nom 
-    aleatoire dans une liste prédefinie 
+    '''  This function create dictionnary of random enemy between 1 and 3 
+    with prenamed random name 
     --------------
-    ne prend pas d'argument'''
+    This function doesn't need parameters '''
     c=0
     enemy_list = []
     name_list= ["Pythosore","Devosore","Simplosore","Tiranosor","Bigbob","Jevaismourir"]
@@ -52,17 +52,4 @@ def pop_enemy():
         enemy_list.append({ "Name"+str(c+1) : random.choice(name_list) , "PV" : random.randint(35,50)})
         c += 1 
     return enemy_list
-
  
-#Fonction principal de choix : 
-# def main_menu(x):
-#     leave = True 
-#     if input == 1 :
-#         #boucle while leave == True : choix ... 
-#     if input == 2 : 
-        
- 
-# Fonction qui va etre appeler a chaque round += 1 
-# def lvlup(x):
-# 	if round + 1 :
-#         my_hp + 9 
