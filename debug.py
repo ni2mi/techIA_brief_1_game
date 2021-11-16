@@ -24,3 +24,6 @@ for monstre in enemy:
 
 
     
+ if choix_inventaire != str(int) :
+                        print(error)  #Print une erreur si l'input des choix d'attaque retourne une mauvaise valeurs 
+                        break
