@@ -18,26 +18,21 @@ def test_maxi_potion():
     assert fonction.maxi_potion(pv) == 15 + 50
 
 def test_attaque() :
-    pv = 50 
-    assert pv > fonction.attaque(pv)
+    test_attaque(50)
+    assert  45 >= test_attaque(50) 
 
 def test_attaque_eclair():
     pv = 50 
-    assert pv > fonction.attaque_eclair(pv)
+    assert fonction.attaque_eclair(pv) <= 41  
 
 def test_attaque_groupee():
     pv = 50 
-    assert pv > fonction.attaque_groupee(pv)
+    assert 34 <= fonction.attaque_groupee(pv) <= 42
 
 def test_attaque_ennemi():
     pv = 50 
-    assert pv > fonction.attaque_ennemi(pv)
+    assert fonction.attaque_ennemi(pv) <= 46 
 
 def test_pop_enemy():
-    assert type(fonction.pop_enemy()) == list 
-
-def test_create_enemy(): 
-    a = fonction.create_enemy()
-    assert type(a) == dict 
-
-
+    assert type(fonction.pop_enemy()) == list
+    assert 50 >= fonction.pop_enemy()[0]["PV"] >= 35 
