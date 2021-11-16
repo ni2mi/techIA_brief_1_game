@@ -53,7 +53,6 @@ def pop_enemy():                  # Fonction qui génère un nombre aléatoire e
     ''' Fonction qui génère aléatoirement entre 1 et 3 ennemi  
     ---------------  
     Prend pour parametre x un int  '''
-def pop_enemy():
     x=0
     liste = []
     while x < random.randint(1,3):
