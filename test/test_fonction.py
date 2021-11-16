@@ -18,8 +18,7 @@ def test_maxi_potion():
     assert fonction.maxi_potion(pv) == 15 + 50
 
 def test_attaque() :
-    test_attaque(50)
-    assert  45 >= test_attaque(50) 
+    assert  45 >= fonction.attaque(50) 
 
 def test_attaque_eclair():
     pv = 50 
