@@ -33,7 +33,7 @@ def potion(x):                      # x =  Les points de vie de {prenom}
     Prend pour parametre x un int  '''
     x+= 15  
     return x 
-def maxipotion(x):                 # x =  Les points de vie de {prenom} 
+def maxi_potion(x):                 # x =  Les points de vie de {prenom} 
     '''  Fonction pour ajouter 50 PV  
     ---------------  
     Prend pour parametre x un int  '''
@@ -41,7 +41,7 @@ def maxipotion(x):                 # x =  Les points de vie de {prenom}
     return x 
 
 def create_enemy(): 
-        '''  Fonction qui créer un monstre aléatoire entre 35-50 pv 
+    '''  Fonction qui créer un monstre aléatoire entre 35-50 pv 
     ---------------  
     N'a pas besoin de parametre  '''
     liste = ["Pythosore","Devosore","Simplosore","Tiranosor","Bigbob","Jevaismourir"]
@@ -53,9 +53,13 @@ def pop_enemy():                  # Fonction qui génère un nombre aléatoire e
     ''' Fonction qui génère aléatoirement entre 1 et 3 ennemi  
     ---------------  
     Prend pour parametre x un int  '''
-    y = random.randint(1,3)
-    x = y 
-    return create_enemy()
+def pop_enemy():
+    x=0
+    liste = []
+    while x < random.randint(1,3):
+        liste.append(create_enemy())
+        x += 1 
+    return liste
 
  
 #Fonction principal de choix : 

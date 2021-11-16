@@ -2,47 +2,42 @@ import os
 import sys
 import inspect
 import _ssl
-from fonction import create_enemy
 
 currentdir = os.path.dirname(os.path.abspath(inspect.getfile(inspect.currentframe())))
 parentdir = os.path.dirname(currentdir)
 sys.path.insert(0, parentdir) 
 
-import main 
 
-def test_potion(x):
-    assert type(x) == int 
-    assert x > 0 
+import fonction 
 
-def test_maxipotion(x):
-    assert type(x) == int 
-    assert x > 0 
+def test_potion():
+    assert fonction.potion(15) == 15 + 15
 
-def test_attaque(x) :
-    assert type(x) == int 
-    assert x > 0 
+def test_maxi_potion():
+    pv = 15 
+    assert fonction.maxi_potion(pv) == 15 + 50
 
-def test_attaque_eclair(x):
-    assert type(x) == int 
-    assert x > 0 
+def test_attaque() :
+    pv = 50 
+    assert pv > fonction.attaque(pv)
 
-def test_attaque_groupee(x):
-    assert type(x) == int 
-    assert x > 0 
+def test_attaque_eclair():
+    pv = 50 
+    assert pv > fonction.attaque_eclair(pv)
 
-def test_attaque_ennemi(x):
-    assert type(x) == int 
-    assert x > 0 
+def test_attaque_groupee():
+    pv = 50 
+    assert pv > fonction.attaque_groupee(pv)
 
-def test_pop_enemy(x):
-    assert type(x) == int 
-    assert x > 0 
+def test_attaque_ennemi():
+    pv = 50 
+    assert pv > fonction.attaque_ennemi(pv)
 
-def test_main_menu(x):
-    assert input == True # ? 
+def test_pop_enemy():
+    assert type(fonction.pop_enemy()) == list 
 
 def test_create_enemy(): 
-    assert create_enemy == dict 
+    a = fonction.create_enemy()
+    assert type(a) == dict 
 
-# def lvlup(x):
 
