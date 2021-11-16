@@ -1,25 +1,25 @@
 import random
-def attaque(x) :                    # x =  Les points de vie ennemie ex : x = enemy["pv"]
+def attack(x) :                    # x =  Les points de vie ennemie ex : x = enemy["pv"]
     ''' Fonction pour l'attaque corp à corp   
     ---------------  
     Prend pour parametre x un int  '''
     return x - random.randint(5,10) 
 
 
-def attaque_eclair(x):              # x =  Les points de vie ennemie 
+def attack_lightning(x):              # x =  Les points de vie ennemie 
     ''' Fonction pour l'attaque élcaire  
     ---------------  
     Prend pour parametre x un int  '''   
     return x - random.randint(9,12)
 
-def attaque_groupee(x):             # x =  Les points de vie ennemie 
+def attack_group(x):             # x =  Les points de vie ennemie 
     ''' Fonction pour l'attaque groupé 
     ---------------  
     Prend pour parametre x un int  '''
     return x - random.randint(8,16)
 
 
-def attaque_ennemi(x):              # x =  Les points de vie de {prenom} 
+def enemy_attack(x):              # x =  Les points de vie de {prenom} 
     '''  Fonction quand l'ennemie attaque 
     ---------------  
     Prend pour parametre x un int  '''
@@ -33,32 +33,25 @@ def potion(x):                      # x =  Les points de vie de {prenom}
     Prend pour parametre x un int  '''
     x+= 15  
     return x 
-def maxi_potion(x):                 # x =  Les points de vie de {prenom} 
+def max_potion(x):                 # x =  Les points de vie de {prenom} 
     '''  Fonction pour ajouter 50 PV  
     ---------------  
     Prend pour parametre x un int  '''
     x += 50 
     return x 
-
-def create_enemy(): 
-    '''  Fonction qui créer un monstre aléatoire entre 35-50 pv 
-    ---------------  
-    N'a pas besoin de parametre  '''
-    liste = ["Pythosore","Devosore","Simplosore","Tiranosor","Bigbob","Jevaismourir"]
-    x = { "Name" : random.choice(liste) , "PV" : random.randint(35,50)}
-    return x 
-
-    
-def pop_enemy():                  # Fonction qui génère un nombre aléatoire entre 1 et 3 
-    ''' Fonction qui génère aléatoirement entre 1 et 3 ennemi  
-    ---------------  
-    Prend pour parametre x un int  '''
-    x=0
-    liste = []
-    while x < random.randint(1,3):
-        liste.append(create_enemy())
-        x += 1 
-    return liste
+  
+def pop_enemy():
+    '''  Fonction pour creer entre 1 et 3 ennemis de nom 
+    aleatoire dans une liste prédefinie 
+    --------------
+    ne prend pas d'argument'''
+    c=0
+    enemy_list = []
+    name_list= ["Pythosore","Devosore","Simplosore","Tiranosor","Bigbob","Jevaismourir"]
+    while c < random.randint(1,3):
+        enemy_list.append({ "Name"+str(c+1) : random.choice(name_list) , "PV" : random.randint(35,50)})
+        c += 1 
+    return enemy_list
 
  
 #Fonction principal de choix : 

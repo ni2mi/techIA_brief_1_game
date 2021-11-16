@@ -13,24 +13,24 @@ import fonction
 def test_potion():
     assert fonction.potion(15) == 15 + 15
 
-def test_maxi_potion():
+def test_max_potion():
     pv = 15 
-    assert fonction.maxi_potion(pv) == 15 + 50
+    assert fonction.max_potion(pv) == 15 + 50
 
-def test_attaque() :
-    assert  45 >= fonction.attaque(50) 
+def test_attack() :
+    assert  45 >= fonction.attack(50) 
 
-def test_attaque_eclair():
+def test_attack_lightning():
     pv = 50 
-    assert fonction.attaque_eclair(pv) <= 41  
+    assert fonction.attack_lightning(pv) <= 41  
 
-def test_attaque_groupee():
+def test_attack_group():
     pv = 50 
-    assert 34 <= fonction.attaque_groupee(pv) <= 42
+    assert 34 <= fonction.attack_group(pv) <= 42
 
-def test_attaque_ennemi():
+def test_enemy_attack():
     pv = 50 
-    assert fonction.attaque_ennemi(pv) <= 46 
+    assert fonction.enemy_attack(pv) <= 46 
 
 def test_pop_enemy():
     assert type(fonction.pop_enemy()) == list
