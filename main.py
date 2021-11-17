@@ -132,14 +132,14 @@ while leave : # program starting loop
 
 
 
-                    elif inventory_choice == "3" : # player chosed to quit inventory
+                    elif inventory_choice == "3" : # player chooses to quit inventory
                         break
 
                     else:
                         print(error)
                         break 
      
-                elif battle_choice == "3" : # player chose to leave the game
+                elif battle_choice == "3" : # player chooses to leave the game
                     sys.exit("You leave the game") 
                         
                 else:

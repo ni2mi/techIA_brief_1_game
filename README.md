@@ -6,3 +6,6 @@ This Turn-Based Role Playing game need 1 player
 You have to kill all monsters to win 
 
 
+
+You must need to pip install requirements.txt if it's not installed on your system :
+``` pip install -r requirements.txt ``` 
