@@ -30,7 +30,7 @@ while leave : # program starting loop
             print("Monster on game :")
             for monster in enemies: # we show the remaining enemies 
                 print(monster["Name"] , " " , monster["HP"] , " HP")
-            battle_choice = input ("Make your choice  \n  1 : Attack \n  2 : Iventory space \n  3 : Leave the game \n ")
+            battle_choice = input ("Make your choice  \n  1 : Attack \n  2 : Inventory space \n  3 : Leave the game \n ")
 
             combat = True 
             while combat : # we start the adventure
@@ -176,7 +176,7 @@ while leave : # program starting loop
                 print ("Game Over!")
                 break
     
-    elif menu_choice == '2' :
+    elif menu_choice == '2' : # Player chooses score menu  
 
         if os.path.exists('./data/scores.csv') == False :
             print("==================================")
@@ -199,7 +199,7 @@ while leave : # program starting loop
         leave = False 
         break
         
-    else:
+    else: 
         print(error)
         continue
     

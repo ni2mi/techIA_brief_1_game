@@ -36,7 +36,7 @@ def potion(x):                      # x =  Les points de vie de {prenom}
     x+= 15  
     return x 
 def max_potion(x):                 # x =  Les points de vie de {prenom} 
-    '''  This function add 15HP to HP_player 
+    '''  This function add 50HP to HP_player 
     ---------------  
     x should be an int  (Like x = player_hp)  '''
     x += 50 

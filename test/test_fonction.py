@@ -34,4 +34,4 @@ def test_enemy_attack():
 
 def test_pop_enemy():
     assert type(fonction.pop_enemy()) == list
-    assert 50 >= fonction.pop_enemy()[0]["PV"] >= 35 
+    assert 50 >= fonction.pop_enemy()[0]["HP"] >= 35 
